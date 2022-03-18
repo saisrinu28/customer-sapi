@@ -18,7 +18,7 @@ pipeline {
      stage('Deployment') {
    
       steps {
-            bat 'mvn -U -V -e -B -Pdev deploy -DmuleDeploy' 
+            bat 'mvn clean package deploy -Pdev -DmuleDeploy' 
       }
     }
    
